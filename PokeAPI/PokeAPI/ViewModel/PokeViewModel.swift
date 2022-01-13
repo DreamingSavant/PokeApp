@@ -38,6 +38,24 @@ class PokemonViewModel {
         }
     }
     
+    func fetchImage(with URL: String, completion: @escaping (UIImage?)->()) {
+        let urlString = URL
+        if let data = self.imageCache.get(url: urlString) {
+            print("Cache")
+            completion(UIImage(data: data))
+            return
+        }
+        completion(nil)
+        self.network.fetchImage(urlString: urlString, completion: { (result) in
+            guard let data = result else {
+                completion(nil)
+                return print("No Data was present")
+            }
+            self.imageCache.set(data: data, url: urlString)
+            completion(UIImage(data: data))
+        })
+    }
+    
     func getPokemonCount() -> Int {
         return pokemon.count
     }
@@ -51,8 +69,8 @@ class PokemonViewModel {
     }
     
     func getPokemonImage() -> UIImage? {
-    
-    return UIImage()
+        
+        return UIImage()
     }
     
     func getPokemonId() -> Int {

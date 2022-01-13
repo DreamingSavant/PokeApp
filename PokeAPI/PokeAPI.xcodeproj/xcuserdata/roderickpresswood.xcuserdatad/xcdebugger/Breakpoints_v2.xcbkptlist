@@ -8,7 +8,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "6F856209-E8BB-42A5-B1E2-55E737F54DC0"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PokeAPI/Networking/PokeNetwork.swift"
@@ -24,7 +24,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "D595C1B5-C222-4FA4-B6B9-6116D9759BD9"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PokeAPI/ViewModel/PokeViewModel.swift"
@@ -36,11 +36,11 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "D595C1B5-C222-4FA4-B6B9-6116D9759BD9 - f330f347fb4d603a"
+                  uuid = "D595C1B5-C222-4FA4-B6B9-6116D9759BD9 - 9c0f3cbd4206155d"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "PokeAPI.PokemonViewModel.getPokemonDetail(at: Swift.Int) -&gt; ()"
+                  symbolName = "PokeAPI.PokemonViewModel.getPokemonDetail(at: Swift.Int, completion: (PokeAPI.PokemonDetail) -&gt; ()) -&gt; ()"
                   moduleName = "PokeAPI"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/roderickpresswood/Documents/Interview%20Proj/PokeAPI/PokeAPI/ViewModel/PokeViewModel.swift"
@@ -48,14 +48,14 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "31"
                   endingLineNumber = "31"
-                  offsetFromSymbolStart = "93">
+                  offsetFromSymbolStart = "124">
                </Location>
                <Location
-                  uuid = "D595C1B5-C222-4FA4-B6B9-6116D9759BD9 - fd4eb65a3fc25da0"
+                  uuid = "D595C1B5-C222-4FA4-B6B9-6116D9759BD9 - e0dd09f1af06d380"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;PokeAPI.PokemonDetail&gt;) -&gt; () in PokeAPI.PokemonViewModel.getPokemonDetail(at: Swift.Int) -&gt; ()"
+                  symbolName = "closure #1 (Swift.Optional&lt;PokeAPI.PokemonDetail&gt;) -&gt; () in PokeAPI.PokemonViewModel.getPokemonDetail(at: Swift.Int, completion: (PokeAPI.PokemonDetail) -&gt; ()) -&gt; ()"
                   moduleName = "PokeAPI"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/roderickpresswood/Documents/Interview%20Proj/PokeAPI/PokeAPI/ViewModel/PokeViewModel.swift"
@@ -63,7 +63,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "33"
                   endingLineNumber = "33"
-                  offsetFromSymbolStart = "182">
+                  offsetFromSymbolStart = "225">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -72,7 +72,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "C67CF4EC-7E56-4A77-A953-F0867D0A5F71"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PokeAPI/Networking/PokeNetwork.swift"
@@ -88,7 +88,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "FAD5E629-35C7-4DBA-BBC7-2AE75E7BF1F4"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PokeAPI/Networking/PokeNetwork.swift"
@@ -104,7 +104,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "A3BBA2D8-8A2F-4D0A-B415-1118CF28F47E"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PokeAPI/Networking/PokeNetwork.swift"
@@ -120,7 +120,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "CB736A19-FEBF-4381-8491-237528A55912"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PokeAPI/Networking/PokeNetwork.swift"
@@ -136,7 +136,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "9BEB9BF0-9BD7-4B71-9B20-122939080753"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PokeAPI/Networking/PokeNetwork.swift"
@@ -152,7 +152,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "396A97E2-E319-4156-8EF0-3806BB867A58"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PokeAPI/Networking/PokeNetwork.swift"
@@ -168,7 +168,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "5DEC7BA5-3905-435D-85CD-C4E88901F1F7"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PokeAPI/Networking/PokeNetwork.swift"

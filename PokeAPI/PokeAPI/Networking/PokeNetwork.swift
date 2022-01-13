@@ -59,4 +59,27 @@ class PokeNetwork {
         }.resume()
         
     }
+    
+    func fetchImage(urlString: String, completion: @escaping (Data?)->()) {
+        
+        guard let url = URL(string: urlString) else {
+            return
+        }
+        
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            
+            guard error == nil else {
+                completion(nil)
+                return print(error.debugDescription)
+            }
+            
+            guard let data = data else {
+                return
+            }
+            
+            completion(data)
+            
+        }.resume()
+        
+    }
 }
