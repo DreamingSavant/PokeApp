@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C62B7063278F1A06002A5423 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62B7062278F1A06002A5423 /* ViewController.swift */; };
+		29BAB7E428495D3700ED1814 /* Pokemon.json in Resources */ = {isa = PBXBuildFile; fileRef = 29BAB7E328495D3700ED1814 /* Pokemon.json */; };
+		29BAB7E7284E516A00ED1814 /* PokemonTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BAB7E6284E516A00ED1814 /* PokemonTableView.swift */; };
+		29BAB803284EB94200ED1814 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BAB802284EB94200ED1814 /* SwiftUIView.swift */; };
+		29C8F574284FA39600D964BB /* MockHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C8F573284FA39600D964BB /* MockHelper.swift */; };
+		29C8F575284FA3C100D964BB /* MockHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C8F573284FA39600D964BB /* MockHelper.swift */; };
+		C62B7063278F1A06002A5423 /* PokeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62B7062278F1A06002A5423 /* PokeTableViewController.swift */; };
 		C62B7068278F1A09002A5423 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C62B7067278F1A09002A5423 /* Assets.xcassets */; };
 		C62B7076278F1A0A002A5423 /* PokeAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62B7075278F1A0A002A5423 /* PokeAPITests.swift */; };
 		C62B7081278F1A0A002A5423 /* PokeAPIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62B7080278F1A0A002A5423 /* PokeAPIUITests.swift */; };
@@ -38,8 +43,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		29BAB7E328495D3700ED1814 /* Pokemon.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Pokemon.json; sourceTree = "<group>"; };
+		29BAB7E6284E516A00ED1814 /* PokemonTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTableView.swift; sourceTree = "<group>"; };
+		29BAB802284EB94200ED1814 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		29C8F573284FA39600D964BB /* MockHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHelper.swift; sourceTree = "<group>"; };
 		C62B705B278F1A06002A5423 /* PokeAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C62B7062278F1A06002A5423 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C62B7062278F1A06002A5423 /* PokeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeTableViewController.swift; sourceTree = "<group>"; };
 		C62B7067278F1A09002A5423 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C62B706C278F1A09002A5423 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C62B7071278F1A0A002A5423 /* PokeAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokeAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +91,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		29BAB7E528495D6500ED1814 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				29C8F573284FA39600D964BB /* MockHelper.swift */,
+				29BAB7E328495D3700ED1814 /* Pokemon.json */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
 		C62B7052278F1A06002A5423 = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +139,7 @@
 			children = (
 				C62B7075278F1A0A002A5423 /* PokeAPITests.swift */,
 				C62B7077278F1A0A002A5423 /* Info.plist */,
+				29BAB7E528495D6500ED1814 /* Mock */,
 			);
 			path = PokeAPITests;
 			sourceTree = "<group>";
@@ -137,8 +156,10 @@
 		C62B708E278F1A20002A5423 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				C62B7062278F1A06002A5423 /* ViewController.swift */,
+				C62B7062278F1A06002A5423 /* PokeTableViewController.swift */,
 				C62B70A0278F3248002A5423 /* DetailViewController.swift */,
+				29BAB7E6284E516A00ED1814 /* PokemonTableView.swift */,
+				29BAB802284EB94200ED1814 /* SwiftUIView.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -288,6 +309,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29BAB7E428495D3700ED1814 /* Pokemon.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,10 +329,13 @@
 			files = (
 				C62B709F278F1F27002A5423 /* AppDelegate.swift in Sources */,
 				C62B709E278F1F27002A5423 /* SceneDelegate.swift in Sources */,
+				29BAB7E7284E516A00ED1814 /* PokemonTableView.swift in Sources */,
 				C62B70A3278F697F002A5423 /* ImageCache.swift in Sources */,
+				29BAB803284EB94200ED1814 /* SwiftUIView.swift in Sources */,
 				C62B7096278F1B1C002A5423 /* PokeModel.swift in Sources */,
 				C62B7098278F1B4D002A5423 /* PokeViewModel.swift in Sources */,
-				C62B7063278F1A06002A5423 /* ViewController.swift in Sources */,
+				C62B7063278F1A06002A5423 /* PokeTableViewController.swift in Sources */,
+				29C8F575284FA3C100D964BB /* MockHelper.swift in Sources */,
 				C62B7094278F1AF0002A5423 /* PokeNetwork.swift in Sources */,
 				C62B70A1278F3248002A5423 /* DetailViewController.swift in Sources */,
 			);
@@ -321,6 +346,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C62B7076278F1A0A002A5423 /* PokeAPITests.swift in Sources */,
+				29C8F574284FA39600D964BB /* MockHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,6 +496,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PZS2C55B8C;
 				INFOPLIST_FILE = PokeAPI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -488,6 +515,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PZS2C55B8C;
 				INFOPLIST_FILE = PokeAPI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

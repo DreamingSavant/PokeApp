@@ -10,10 +10,14 @@ import UIKit
 
 class PokemonViewModel {
     
-    private var pokemon: [Pokemon] = []
+    private var pokemon: [Pokemon]
     private var pokemonDetails: PokemonDetail?
     private var network = PokeNetwork()
     private var imageCache = ImageCache.sharedCache
+    
+    init(pokemon: [Pokemon] = []) {
+        self.pokemon = pokemon
+    }
     
     func getPokemon(completion: @escaping () -> Void) {
         
@@ -66,6 +70,10 @@ class PokemonViewModel {
     
     func getPokemonURL(at index: Int) -> String {
         return pokemon[index].url
+    }
+    
+    func getPokemonID(at index: Int) -> String {
+        return "\(index)"
     }
     
     func getPokemonImage() -> UIImage? {

@@ -47,23 +47,28 @@ class DetailViewController: UIViewController {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFit
         imageView.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        imageView.isAccessibilityElement = true
         
         let nameLabel = UILabel(frame: .zero)
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         nameLabel.textColor = .black
         nameLabel.textAlignment = .left
+        nameLabel.isAccessibilityElement = true
         
         let orderLabel = UILabel(frame: .zero)
         orderLabel.translatesAutoresizingMaskIntoConstraints = false
         orderLabel.textAlignment = .left
+        orderLabel.isAccessibilityElement = true
         
         let heightLabel = UILabel(frame: .zero)
         heightLabel.translatesAutoresizingMaskIntoConstraints = false
         heightLabel.textAlignment = .left
+        heightLabel.isAccessibilityElement = true
         
         let weightLabel = UILabel(frame: .zero)
         weightLabel.translatesAutoresizingMaskIntoConstraints = false
         weightLabel.textAlignment = .left
+        weightLabel.isAccessibilityElement = true
         
         viewModel.getPokemonDetail(at: index) { [weak self] details in
             DispatchQueue.main.async {

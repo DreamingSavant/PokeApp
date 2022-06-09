@@ -9,25 +9,40 @@ import XCTest
 @testable import PokeAPI
 
 class PokeAPITests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+    var model: PokemonViewModel!
+    var viewController: PokeTableViewController!
+    var pokeView: SwiftUIView!
+    
+    
+    func loadMock() -> PokemonPage {
+        guard let path = Bundle(for: PokeAPITests.self).path(forResource: "Pokemon", ofType: "json"), let data = try? Data(contentsOf: URL(fileURLWithPath: path)), let response = try? JSONDecoder().decode(PokemonPage.self, from: data)  else { fatalError("Cannot find Pokemon.json file") }
+        return response
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    override func setUp() {
+        let pokemon = loadMock().results
+        model = PokemonViewModel(pokemon: pokemon)
+        viewController = PokeTableViewController()
+        pokeView = SwiftUIView()
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    override func tearDown() {
+        model = nil
+        viewController = nil
+        pokeView = nil
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func testMockResponseInVM() {
+        XCTAssertEqual(model.getPokemonCount(), 30)
+        XCTAssertEqual(model.getPokemonName(at: 0), "bulbasaur")
+        XCTAssertEqual(model.getPokemonName(at: 29), "nidorina")
     }
-
+    
+    func testSwiftUIView() {
+        let text = pokeView.subText
+        XCTAssertEqual(text, "Gotta Catch em all!")
+        let body = pokeView.body
+        XCTAssertNotNil(body, "Did not find body")
+    }
 }
